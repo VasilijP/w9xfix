@@ -1,0 +1,7 @@
+# build outputs, DOSBox-X sandbox, unpacked Open Watcom toolchain
+build/
+*.o
+*.obj
+__wcl_*.lnk
+.DS_Store
+._*

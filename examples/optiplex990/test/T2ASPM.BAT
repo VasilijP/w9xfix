@@ -1,0 +1,12 @@
+@ECHO OFF
+ECHO T2ASPM: link report, verbose, dry-run links 0, single-device forms
+W9XFIX aspm > OUT\T2ASPM.TXT
+IF ERRORLEVEL 1 ECHO T2ASPM: aspm rc>=1 >> OUT\RUNALL.TXT
+W9XFIX -v aspm > OUT\T2ASPMV.TXT
+W9XFIX -n aspm links 0 > OUT\T2DRY.TXT
+IF ERRORLEVEL 1 ECHO T2ASPM: -n aspm links 0 rc>=1 >> OUT\RUNALL.TXT
+W9XFIX aspm 00:01.0 > OUT\T2ONE.TXT
+W9XFIX aspm 1002:5B64 >> OUT\T2ONE.TXT
+W9XFIX aspm class:0300 >> OUT\T2ONE.TXT
+W9XFIX aspm 00:1F.0 >> OUT\T2ONE.TXT
+W9XFIX aspm 09:09.0 >> OUT\T2ONE.TXT

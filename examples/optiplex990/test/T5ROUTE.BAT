@@ -1,0 +1,7 @@
+@ECHO OFF
+ECHO T5ROUTE: routers / line, dry-run only
+W9XFIX -n routers 11,10,5,3,9,0,0,0 > OUT\T5ROUTE.TXT
+IF ERRORLEVEL 1 ECHO T5ROUTE: -n routers rc>=1 >> OUT\RUNALL.TXT
+W9XFIX -n line > OUT\T5LINE.TXT
+IF ERRORLEVEL 1 ECHO T5ROUTE: -n line rc>=1 >> OUT\RUNALL.TXT
+W9XFIX -v -n line > OUT\T5LINEV.TXT

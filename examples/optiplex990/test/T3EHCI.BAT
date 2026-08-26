@@ -1,0 +1,11 @@
+@ECHO OFF
+ECHO T3EHCI: ehci show, verbose, dry-run handoff
+W9XFIX ehci > OUT\T3EHCI.TXT
+IF ERRORLEVEL 1 ECHO T3EHCI: ehci rc>=1 >> OUT\RUNALL.TXT
+W9XFIX -v ehci > OUT\T3EHCIV.TXT
+W9XFIX -n ehci handoff > OUT\T3DRY.TXT
+IF ERRORLEVEL 1 ECHO T3EHCI: -n ehci handoff rc>=1 >> OUT\RUNALL.TXT
+W9XFIX ehci 00:1D.0 > OUT\T3ONE.TXT
+W9XFIX ehci class:0C0320 >> OUT\T3ONE.TXT
+W9XFIX ehci eecp=68 >> OUT\T3ONE.TXT
+W9XFIX ehci eecp=50 >> OUT\T3ONE.TXT
