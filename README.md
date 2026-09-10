@@ -1,5 +1,7 @@
 # w9xfix
 
+https://youtu.be/VS1iouD_OJQ
+
 A small real-mode DOS tool (16-bit, 386+) that fixes the three things a modern BIOS leaves in a
 state Windows 9x cannot survive. Run it from `AUTOEXEC.BAT` before `WIN` starts.
 
